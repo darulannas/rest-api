@@ -1,0 +1,24 @@
+[
+  {
+    "nama": "Darul Annas",
+    "umur": 27,
+    "nim": "111680",
+    "lulus": true,
+    "hobby": ["coding", "gaming"],
+    "pembimbing": {
+      "pembimbing1": "Mirza",
+      "pembimbing2": "Annas"
+    }
+  },
+  {
+    "nama": "Darul Annas",
+    "umur": 27,
+    "nim": "111680",
+    "lulus": true,
+    "hobby": ["coding", "gaming"],
+    "pembimbing": {
+      "pembimbing1": "Mirza",
+      "pembimbing2": "Annas"
+    }
+  }
+]
