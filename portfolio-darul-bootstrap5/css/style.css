@@ -18,3 +18,14 @@ section {
 #gallery .row > * {
   padding: 0;
 }
+
+.ig-thumbnail {
+  width: 100px;
+  height: 100px;
+  float: left;
+  overflow: hidden;
+}
+
+.ig-thumbnail img {
+  width: 100px;
+}

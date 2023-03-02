@@ -90,13 +90,49 @@
           <h2>Social Media</h2>
         </div>
       </div>
-      <div class="row justify-content-center fs-5 text-center">
+      <div class="row justify-content-center fs-5">
         <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000">
-          <h5>Rekam Jejak IT</h5>
-          <img src="img/webimaginestudio.png" alt="" width="100">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="img/profil-image.jpeg" width="200" class="rounded-circle img-thumbnail">
+            </div>
+            <div class="col-md-8">
+              <h5>Rekam Jejak IT</h5>
+              <p>70000 Subscribers</p>
+            </div>
+          </div>
+          <div class="row mt-3 pb-3">
+            <div class="col">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-BmTKA1xCm8?rel=0" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae facere eveniet rem vitae, dolore unde, distinctio provident deleniti esse veniam itaque perferendis minima incidunt similique.</p>
+          <div class="row">
+            <div class="col-md-4">
+              <img src="img/profil-image.jpeg" width="200" class="rounded-circle img-thumbnail">
+            </div>
+            <div class="col-md-8">
+              <h5>@rekamjejakit</h5>
+              <p>7000 Followers</p>
+            </div>
+          </div>
+
+          <div class="row mt-3 pb-3">
+            <div class="col">
+              <div class="ig-thumbnail">
+                <img src="img/webiec.png" width="100">
+              </div>
+              <div class="ig-thumbnail">
+                <img src="img/webiec.png" width="100">
+              </div>
+              <div class="ig-thumbnail">
+                <img src="img/webiec.png" width="100">
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
