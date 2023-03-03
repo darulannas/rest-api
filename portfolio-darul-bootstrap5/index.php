@@ -1,3 +1,18 @@
+<?php
+$curl = curl_init();
+curl_setopt($curl, CURLOPT_URL, 'https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=UCqBJzNFXshu3rc_uJkceHyw&key=AIzaSyBSZZ2RDuO0WpeVST7O8efYc3nT_N6c9LU');
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+$result = curl_exec($curl);
+curl_close($curl);
+
+$result = json_decode($result, true);
+
+$ytProfilePic = $result['items'][0]['snippet']['thumbnails']['medium']['url'];
+$chName = $result['items'][0]['snippet']['title'];
+$subscriber = $result['items'][0]['statistics']['subscriberCount'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -94,11 +109,11 @@
         <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000">
           <div class="row">
             <div class="col-md-4">
-              <img src="img/profil-image.jpeg" width="200" class="rounded-circle img-thumbnail">
+              <img src="<?= $ytProfilePic; ?>" width="200" class="rounded-circle img-thumbnail">
             </div>
             <div class="col-md-8">
-              <h5>Rekam Jejak IT</h5>
-              <p>70000 Subscribers</p>
+              <h5><?= $chName; ?></h5>
+              <p><?= $subscriber; ?></p>
             </div>
           </div>
           <div class="row mt-3 pb-3">
