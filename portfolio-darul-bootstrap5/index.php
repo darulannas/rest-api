@@ -1,15 +1,27 @@
 <?php
-$curl = curl_init();
-curl_setopt($curl, CURLOPT_URL, 'https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=UCqBJzNFXshu3rc_uJkceHyw&key=AIzaSyBSZZ2RDuO0WpeVST7O8efYc3nT_N6c9LU');
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-$result = curl_exec($curl);
-curl_close($curl);
+function get_CURL($url)
+{
+  $curl = curl_init();
+  curl_setopt($curl, CURLOPT_URL, $url);
+  curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+  $result = curl_exec($curl);
+  curl_close($curl);
 
-$result = json_decode($result, true);
+  return json_decode($result, true);
+}
+
+$result = get_CURL('https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=UCqBJzNFXshu3rc_uJkceHyw&key=AIzaSyBSZZ2RDuO0WpeVST7O8efYc3nT_N6c9LU');
+
 
 $ytProfilePic = $result['items'][0]['snippet']['thumbnails']['medium']['url'];
 $chName = $result['items'][0]['snippet']['title'];
 $subscriber = $result['items'][0]['statistics']['subscriberCount'];
+
+// latest video
+// $urlLatestVideo = 'https://www.googleapis.com/youtube/v3/search?key=AIzaSyBSZZ2RDuO0WpeVST7O8efYc3nT_N6c9LU&channelId=UCqBJzNFXshu3rc_uJkceHyw&maxResults=1&order=date&part=snippet';
+// $result = get_CURL($urlLatestVideo);
+// $latestVideoId = $result['items'][0]['id']['videoId'];
+// kemudian, panggil $latestVideoId di html, gantikan id video nya
 
 ?>
 
@@ -113,7 +125,8 @@ $subscriber = $result['items'][0]['statistics']['subscriberCount'];
             </div>
             <div class="col-md-8">
               <h5><?= $chName; ?></h5>
-              <p><?= $subscriber; ?></p>
+              <p><?= $subscriber; ?> Subscribers</p>
+              <div class="g-ytsubscribe" data-channelid="UCqBJzNFXshu3rc_uJkceHyw" data-layout="default" data-count="default"></div>
             </div>
           </div>
           <div class="row mt-3 pb-3">
@@ -388,6 +401,9 @@ $subscriber = $result['items'][0]['statistics']['subscriberCount'];
     });
   </script>
   <!-- end js contact form -->
+
+  <!-- js yt -->
+  <script src="https://apis.google.com/js/platform.js"></script>
 </body>
 
 </html>
