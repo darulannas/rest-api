@@ -16,8 +16,8 @@
                             <small class="form-text text-danger"><?= form_error('nama'); ?></small>
                         </div>
                         <div class="form-group">
-                            <label for="nrp">NIM</label>
-                            <input type="text" name="nrp" class="form-control" id="nim" value="<?= $mahasiswa['nim']; ?>">
+                            <label for="nrp">NRP</label>
+                            <input type="text" name="nrp" class="form-control" id="nrp" value="<?= $mahasiswa['nrp']; ?>">
                             <small class="form-text text-danger"><?= form_error('nrp'); ?></small>
                         </div>
                         <div class="form-group">

@@ -15,9 +15,9 @@
                             <small class="form-text text-danger"><?= form_error('nama'); ?></small>
                         </div>
                         <div class="form-group">
-                            <label for="nim">NIM</label>
-                            <input type="text" name="nim" class="form-control" id="nim">
-                            <small class="form-text text-danger"><?= form_error('nim'); ?></small>
+                            <label for="nrp">NRP</label>
+                            <input type="text" name="nrp" class="form-control" id="nrp">
+                            <small class="form-text text-danger"><?= form_error('nrp'); ?></small>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
